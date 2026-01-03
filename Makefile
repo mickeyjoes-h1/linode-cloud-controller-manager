@@ -149,8 +149,8 @@ run-debug: build
 
 .PHONY: mgmt-and-capl-cluster
 mgmt-and-capl-cluster:
-@echo "Skipping cluster setup for PoC"
-@exit 0
+	@echo "Skipping cluster setup for PoC"
+	@exit 0
 
 .PHONY: capl-cluster
 capl-cluster: generate-capl-cluster-manifests create-capl-cluster patch-linode-ccm
