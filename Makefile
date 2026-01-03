@@ -210,9 +210,9 @@ e2e-test:
 	REGION=$(LINODE_REGION) \
 	LINODE_TOKEN=$(LINODE_TOKEN) \
 	LINODE_URL=$(LINODE_URL) \
-	@echo "LINODE_TOKEN_SET=${LINODE_TOKEN:+yes}"
-	@echo "LINODE_TOKEN_LEN=${#LINODE_TOKEN}"
-	@echo "DOCKER_PASSWORD_SET=${DOCKER_PASSWORD:+yes}"
+	@echo "LINODE_TOKEN_SET=${LINODE_TOKEN:+yes}" \
+	@echo "LINODE_TOKEN_LEN=${#LINODE_TOKEN}" \
+	@echo "DOCKER_PASSWORD_SET=${DOCKER_PASSWORD:+yes}" \
 	@exit 0
 	chainsaw test e2e/test --parallel 2 $(E2E_FLAGS)
 
