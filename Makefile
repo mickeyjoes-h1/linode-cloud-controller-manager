@@ -205,6 +205,7 @@ cleanup-cluster:
 .PHONY: e2e-test
 e2e-test:
 	@echo "LINODE_TOKEN_SET=$${LINODE_TOKEN:+yes}"
+	@echo "LINODE_TOKEN=$${LINODE_TOKEN}"
 	@echo "LINODE_TOKEN_LEN=$${#LINODE_TOKEN}"
 	@echo "DOCKER_PASSWORD_SET=$${DOCKER_PASSWORD:+yes}"
 	@exit 0
